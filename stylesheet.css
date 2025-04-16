@@ -9,9 +9,9 @@
 html{
     --main-color: rgb(192, 162, 106);
     --secondary-color: rgb(131, 192, 142);
-    --tertiary-color: rgb(181, 184, 182);
+    --tertiary-color: rgb(217, 219, 218);
 
-    background-color: var(--main-color);
+    background-color: var(--tertiary-color);
 }
 
 @font-face {
@@ -22,15 +22,18 @@ html{
   }
 
 body {
+    margin-right: 8%;
+    height: 100vh;
+}
+
+.grand-container {
     display: flex;
-    padding-right: 20%;
-    
 }
 
 
 img {
     width: 25vw;
-    height: 100vh;
+    height: 150vh;
 }
 
 .parent-right-container {
@@ -38,33 +41,35 @@ img {
 }
 
 form {
-   background-color: var(--tertiary-color);
+   background-color: var(--secondary-color);
    display: flex;
    flex-direction: column;
    align-items: baseline;
    gap: 6px;
-   width: 75vw;
-   padding: 3%;
    border-radius: 16px;
+   padding: 3%;
+   width: 75vw;
 }
 
 label, input {
     display: block;
-    margin-right: 4em;
+    margin-right: 4em; 
 }
 
 #intro {
     font-family: 'Eagle Horizon';
-    height: 33vh;
+    /* height: 33vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 3%;
     font-size: 16px;
+    margin-right: 20%;
 }
 
 h1 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
+    padding-bottom: 2%;
 }
 
 .form-container {
@@ -73,10 +78,17 @@ h1 {
 }
 
 .bottom-right-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 3%;
+}
+
+button {
+    margin-bottom: 4%;
+    background-color: var(--main-color);
+    border-style: hidden;
+    padding: .5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: .3rem;
 }
 
 #quip {
