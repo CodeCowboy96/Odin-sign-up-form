@@ -1,0 +1,28 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+}
+
+
+img {
+    width: 25vw;
+    height: 100vh;
+}
+
+form {
+   
+}
+
+#intro {
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
