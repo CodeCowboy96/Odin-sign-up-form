@@ -6,8 +6,25 @@
     margin: 0;
 }
 
+html{
+    --main-color: rgb(192, 162, 106);
+    --secondary-color: rgb(131, 192, 142);
+    --tertiary-color: rgb(181, 184, 182);
+
+    background-color: var(--main-color);
+}
+
+@font-face {
+    font-family: 'Eagle Horizon'; 
+    src: url('font-import/EagleHorizonP.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+  }
+
 body {
     display: flex;
+    padding-right: 20%;
+    
 }
 
 
@@ -16,13 +33,52 @@ img {
     height: 100vh;
 }
 
+.parent-right-container {
+    margin-top: 26px;
+}
+
 form {
-   
+   background-color: var(--tertiary-color);
+   display: flex;
+   flex-direction: column;
+   align-items: baseline;
+   gap: 6px;
+   width: 75vw;
+   padding: 3%;
+   border-radius: 16px;
+}
+
+label, input {
+    display: block;
+    margin-right: 4em;
 }
 
 #intro {
+    font-family: 'Eagle Horizon';
     height: 33vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 3%;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 1.25rem;
+}
+
+.form-container {
+    display: flex;
+    gap: 6px;
+}
+
+.bottom-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
+}
+
+#quip {
+    margin-top: 1rem;
 }
