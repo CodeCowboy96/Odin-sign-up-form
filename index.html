@@ -9,7 +9,7 @@
 <body>
     <div class="grand-container">
         <div class="img-container">
-            <img src="cosmic.jpg" alt="cosmic energy">
+            <img src="leaf-green-illustration.avif" alt="cosmic energy">
         </div>
         <div class="parent-right-container">
             <div id="intro">
@@ -22,7 +22,7 @@
                 </p>
             </div>
         
-            <form action="\myformhandler">
+            <form  id="signup-form" action="\myformhandler">
                 <h1>Let's do this!</h1>
                 <div class="form-container" id="name-con">
                     <p>
@@ -32,6 +32,9 @@
                         name="first_name"
                         id="user_first_name"
                         required
+                        placeholder="Walt"
+                        pattern="^(?=(?:[^a-zA-Z]*[a-zA-Z]){2})[^0-9]*$"
+                        title="Must contain at least two letters and no numbers"
                         >
                     </p>
                     <p>
@@ -41,6 +44,9 @@
                         name="last_name"
                         id="user_last_name"
                         required
+                        placeholder="Wilkins"
+                        pattern="^(?=(?:[^a-zA-Z]*[a-zA-Z]){2})[^0-9]*$"
+                        title="Must contain at least two letters and no numbers"
                         >
                     </p>
                 </div>
@@ -52,35 +58,44 @@
                         name="mail"
                         id="user_email"
                         required
+                        placeholder="foobar@gmail.com"
                         >
                     </p>
                     <p>
+                        <!-- Pattern RegEx still needs work  -->
                         <label for="phone_number">Phone Number</label>
                         <input
-                        type="number"
+                        type="text"
                         name="phone_number"
                         id="user_phone_number"
                         required
+                        pattern="^\d{3}-\d{3}-\d{4}$" 
+                        title="Format: 123-456-7890"
+                        placeholder="123-456-7890"
                         >
                     </p>
                 </div>
                 <div class="form-container" id="password-con">
                     <p>
                         <label for="password">Password</label>
-                        <input
+                        <input class="passwords"
                         type="password"
                         name="password"
                         id="user_password"
                         required
+                        placeholder="Password1!"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,}$"
+                        title="Password must be at least 8 characters, include uppercase and lowercase letters, a number, and a special character."
                         >
                     </p>
                     <p>
                         <label for="confirm_password">Confirm Password</label>
-                        <input
-                        type="confirm_password"
+                        <input class="passwords"
+                        type="password"
                         name="confirm_password"
                         id="user_confirm_password"
                         required
+                        placeholder="Password1!"
                         >
                     </p>
                 </div>
@@ -88,7 +103,7 @@
             </form>
         
             <div class="bottom-right-container">
-                    <button type="submit">Create Account</button>
+                    <button type="submit" form="signup-form">Create Account</button>
                 <div>
                     Already have an account?
                     <a href="">Log in</a>
@@ -99,6 +114,5 @@
     </div>
     
 </body>
-<!-- Photo cred:Photo by <a href="https://unsplash.com/@aronvisuals?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Aron Visuals</a> on <a href="https://unsplash.com/photos/a-purple-and-blue-space-filled-with-stars-NYwZhS4afQc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-       -->
-</html>
+<!--Photo cred: https://unsplash.com/photos/futuristic-plant-design-BByEIG-AwbQ -->
+       </html>
